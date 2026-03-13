@@ -1,0 +1,88 @@
+@font-face {
+    font-family: pixel;
+    src: url("../fonts/PixelifySans-VariableFont_wght.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: pixel, Arial, sans-serif;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#canvas {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid black;
+    outline: 1px solid rgb(140, 182, 255);
+    width: 100vw;
+    height: 100vh;
+    touch-action: none;
+    z-index: 2;
+}
+
+#ui {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    position: fixed;
+    overflow-x: auto;
+    width: 100vw;
+    padding: 10px 10px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: -3px 0 4px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+}
+
+#ui input {
+    cursor: pointer;
+}
+
+input[type="color"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: black;
+    color: black;
+}
+
+#reset-container {
+    position: fixed;
+    font-size: 30px;
+    top: 10px;
+    left: 50vw;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.558);
+    user-select: none;
+    transform: translate(-50%) /*Centering it*/
+}
+
+#gifs-container {
+    position: fixed;
+    display: none;
+    flex-wrap: wrap;
+    bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.341);
+    z-index: 3;
+    overflow-y: auto;
+    width: 100%;
+    height: 50vh;
+}
+

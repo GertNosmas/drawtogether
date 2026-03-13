@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Paint Online!</title>
+</head>
+<body>
+    <main id="main">
+        <canvas id="canvas" width="400" height="300"></canvas>
+        <div id="ui">
+            <div id="reset-container">
+                <span id="reset-span">Next reset: </span>
+                <time id="reset-time">0:00</time>
+            </div>
+            <input type="color" oninput="updateColor(this.value)">
+            <input type="range" oninput="updateThickness(this.value)" min="0.2" max="50" step="0.1">
+            <input  placeholder="Look for gifs" type="search" onchange="searchGifs(this.value)" onfocus="showGifContainer()">
+
+            <div id="gifs-container">
+
+            </div>
+        </div>
+    </main>
+    <script src="scripts/gif_api.js"></script>
+    <script src="scripts/network.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
